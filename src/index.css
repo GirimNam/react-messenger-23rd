@@ -1,1 +1,33 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family:
+    'Pretendard',
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    'Helvetica Neue',
+    'Segoe UI',
+    'Apple SD Gothic Neo',
+    'Noto Sans KR',
+    sans-serif;
+}
+
+:root {
+  --color-chat-bg: #ebeced;
+}
+
+.app {
+  width: 375px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--color-chat-bg);
+  display: flex;
+  flex-direction: column;
+}
