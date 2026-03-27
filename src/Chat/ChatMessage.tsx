@@ -4,19 +4,24 @@ interface Props {
   message: Message
 }
 
-export default function ChatMessage({ message }: Props) {
+//채팅방에 말풍선
+function ChatMessage({ message }: Props) {
   const isMe = message.sender === 'me'
 
   return (
     <div className={`flex ${isMe ? 'justify-end' : 'justify-start'}`}>
       <div
-        className={`
-          px-3 py-2 rounded-xl max-w-[70%]
-          ${isMe ? 'bg-yellow-300' : 'bg-white'}
-        `}
+        className={`max-w-[70%] px-3 py-2 rounded-xl ${
+          isMe ? 'bg-[var(--blue-20)]' : 'bg-[var(--gray-5)]'
+        }`}
       >
-        {message.text}
+        <div className="text-4">{message.text}</div>
+        <div className="text-[10px] text-gray-400 text-right">
+          {message.time}
+        </div>
       </div>
     </div>
   )
 }
+
+export default ChatMessage
