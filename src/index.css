@@ -1,11 +1,12 @@
 @import 'tailwindcss';
 
+html,
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
+}
+
+body {
   font-family:
     'Pretendard',
     -apple-system,
@@ -69,9 +70,19 @@ body {
 
 .app {
   width: 375px;
-  min-height: 100vh;
+  height: 100vh;
   margin: 0 auto;
   background: var(--color-chat-bg);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
