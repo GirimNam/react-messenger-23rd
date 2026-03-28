@@ -38,13 +38,13 @@ export default function Chat() {
 
           const isFirstMessage = index === 0
           // 임시로 날짜가 바뀌었다고 가정하는 로직 (나중에 chat.date 등으로 확장 가능)
-          const showDateDivider = isFirstMessage
+          /*const showDateDivider = isFirstMessage
 
           const showTail =
             !prev || prev.sender !== chat.sender || prev.time !== chat.time
 
           const showTime =
-            !next || next.sender !== chat.sender || next.time !== chat.time
+            !next || next.sender !== chat.sender || next.time !== chat.time*/
 
           const isNewDay = !prev || prev.date !== chat.date
 
