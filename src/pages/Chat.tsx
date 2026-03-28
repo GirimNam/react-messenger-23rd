@@ -36,16 +36,6 @@ export default function Chat() {
           const next = chatList[index + 1]
           const prev = chatList[index - 1]
 
-          const isFirstMessage = index === 0
-          // 임시로 날짜가 바뀌었다고 가정하는 로직 (나중에 chat.date 등으로 확장 가능)
-          /*const showDateDivider = isFirstMessage
-
-          const showTail =
-            !prev || prev.sender !== chat.sender || prev.time !== chat.time
-
-          const showTime =
-            !next || next.sender !== chat.sender || next.time !== chat.time*/
-
           const isNewDay = !prev || prev.date !== chat.date
 
           return (
@@ -65,10 +55,15 @@ export default function Chat() {
                 <ChatMessage
                   message={chat}
                   showTime={
-                    !chatList[index + 1] ||
-                    chatList[index + 1].sender !== chat.sender
+                    !next ||
+                    next.sender !== chat.sender ||
+                    next.time !== chat.time
                   }
-                  showTail={!prev || prev.sender !== chat.sender || isNewDay}
+                  showTail={
+                    !prev ||
+                    prev.sender !== chat.sender ||
+                    prev.time !== chat.time
+                  }
                 />
               </div>
             </div>
