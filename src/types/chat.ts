@@ -3,4 +3,6 @@ export interface Message {
   text: string
   sender: 'me' | 'other'
   time: string
+  date: string
+  unreadCount: number
 }
