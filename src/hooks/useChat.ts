@@ -33,11 +33,13 @@ export function useChat() {
 
   useEffect(() => {
     const saved = localStorage.getItem('chatList')
-    if (saved) {
-      setChatList(JSON.parse(saved))
-    } else {
+    if (!saved) {
       setChatList(dummyData)
+      return
     }
+
+    const parsed = JSON.parse(saved)
+    setChatList(parsed.length ? parsed : dummyData)
   }, [])
 
   useEffect(() => {

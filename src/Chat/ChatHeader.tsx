@@ -7,7 +7,7 @@ interface Props {
   title: string
 }
 
-function ChatHeader({ title = '친구 이름' }: Props) {
+function ChatHeader({ title }: Props) {
   return (
     <div className="flex items-center justify-between py-2 px-3 h-14 bg-none border-b border-[0.75px] border-[var(--gray-30)]">
       <div className="flex items-center gap-1">

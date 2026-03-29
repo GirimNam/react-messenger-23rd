@@ -47,7 +47,6 @@ function ChatInput({ onSend }: Props) {
 
       <div className="py-5 flex flex-row justify-between">
         <div className="flex flex-row gap-2 items-center">
-          {/* 아이콘 정렬 */}
           <PlusIcon className="w-8 h-8 text-[var(--gray-60)]" />
           <ImageIcon className="w-8 h-8 text-[var(--gray-60)]" />
           <AtIcon className="w-8 h-8 text-[var(--gray-60)]" />
