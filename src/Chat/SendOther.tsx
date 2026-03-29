@@ -7,17 +7,9 @@ interface Props {
   time: string
   unreadCount: number
   showTail: boolean
-  photo?: boolean
 }
 
-function SendOther({
-  name,
-  message,
-  time,
-  unreadCount,
-  showTail,
-  photo = false,
-}: Props) {
+function SendOther({ name, message, time, unreadCount, showTail }: Props) {
   return (
     <div className="flex flex-row gap-[6px] mx-3">
       <div className="flex flex-col justify-start pt-[2px]">
