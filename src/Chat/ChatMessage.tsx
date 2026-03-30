@@ -4,20 +4,12 @@ import SendMe from '@Chat/SendMe'
 
 interface Props {
   message: Message
-  nextMessage?: Message
   showTime: boolean
   showTail: boolean
 }
 
-function ChatMessage({ message, showTail, showTime, nextMessage }: Props) {
+function ChatMessage({ message, showTail, showTime }: Props) {
   const isMe = message.sender === 'me'
-
-  /*const isSameGroup =
-    nextMessage &&
-    nextMessage.sender === message.sender &&
-    nextMessage.time === message.time
-
-  const gapClass = isSameGroup ? 'mb-1' : 'mb-5'*/
 
   if (isMe) {
     return (
