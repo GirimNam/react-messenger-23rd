@@ -13,7 +13,9 @@ function SendMe({ message, time, unreadCount, showTail, showTime }: Props) {
     <div className="flex flex-row gap-1 items-end ">
       <div className="flex flex-col items-end">
         {unreadCount > 0 && (
-          <span className="text-[var(--gray-80)] text-xs">{unreadCount}</span>
+          <span className="text-[var(--gray-80)] text-[11px]">
+            {unreadCount}
+          </span>
         )}
         {showTime && (
           <span className="text-[var(--gray-70)] leading-none text-[10px]">
@@ -34,7 +36,7 @@ function SendMe({ message, time, unreadCount, showTail, showTime }: Props) {
           />
         )}
 
-        <div className="max-w-[264px] break-words text-4 leading-[22px] font-normal">
+        <div className="max-w-[264px] break-words text-[16px]] leading-[22px] font-normal">
           {message}
         </div>
       </div>

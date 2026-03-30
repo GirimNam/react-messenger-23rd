@@ -55,7 +55,7 @@ function SendOther({
           </div>
           <div className="flex flex-col">
             {unreadCount > 0 && (
-              <span className="text-[var(--gray-80)] text-xs">
+              <span className="text-[var(--gray-80)] text-[11px]">
                 {unreadCount}
               </span>
             )}

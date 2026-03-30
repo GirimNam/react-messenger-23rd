@@ -2,7 +2,8 @@ import { useEffect, useRef } from 'react'
 import { useChat } from '@/hooks/useChat'
 import ChatMessage from '@Chat/ChatMessage'
 import ChatInput from '@Chat/ChatInput'
-import ChatHeader from '@/Chat/ChatHeader'
+import ChatHeader from '@Chat/ChatHeader'
+import CalendarIcon from '@assets/CalendarIcon.svg'
 
 export default function Chat() {
   const { chatList, sendMessage } = useChat()
@@ -49,8 +50,14 @@ export default function Chat() {
               className={`flex flex-col ${gapClass}`}
             >
               {isNewDay && (
-                <div className="flex justify-center my-5">
-                  <div className="bg-[var(--gray-60)] text-[var(--gray-5)] text-[11px] px-4 py-1  rounded-full">
+                <div className="flex flex-row justify-center items-center my-5">
+                  <div className="flex flex-row gap-[2px] justify-center items-center bg-[var(--gray-60)] text-[var(--gray-5)] text-[11px] px-4 py-1  rounded-full">
+                    <button>
+                      <img
+                        src={CalendarIcon}
+                        alt="달력"
+                      />
+                    </button>
                     {formatDate(chat.date)}
                   </div>
                 </div>
