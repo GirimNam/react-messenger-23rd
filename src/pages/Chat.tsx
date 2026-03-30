@@ -30,48 +30,50 @@ export default function Chat() {
 
       <div
         ref={scrollRef}
-        className="flex-1 overflow-y-auto no-scrollbar px-3 space-y-2"
+        className="flex-1 overflow-y-auto no-scrollbar px-3"
       >
         {chatList.map((chat, index) => {
           const next = chatList[index + 1]
           const prev = chatList[index - 1]
+
+          const isSameGroupWithNext =
+            next && next.sender === chat.sender && next.time === chat.time
+
+          const gapClass = isSameGroupWithNext ? 'mb-[4px]' : 'mb-[20px]'
 
           const isNewDay = !prev || prev.date !== chat.date
 
           return (
             <div
               key={chat.id}
-              className="flex flex-col"
+              className={`flex flex-col ${gapClass}`}
             >
               {isNewDay && (
                 <div className="flex justify-center my-5">
-                  <div className="bg-[var(--gray-60)] text-[var(--gray-5)] text-[11px] px-4 py-1 rounded-full">
+                  <div className="bg-[var(--gray-60)] text-[var(--gray-5)] text-[11px] px-4 py-1  rounded-full">
                     {formatDate(chat.date)}
                   </div>
                 </div>
               )}
 
-              <div className="mb-2">
-                <ChatMessage
-                  message={chat}
-                  showTime={
-                    !next ||
-                    next.sender !== chat.sender ||
-                    next.time !== chat.time
-                  }
-                  showTail={
-                    !prev ||
-                    prev.sender !== chat.sender ||
-                    prev.time !== chat.time
-                  }
-                />
-              </div>
+              <ChatMessage
+                message={chat}
+                showTime={
+                  !next ||
+                  next.sender !== chat.sender ||
+                  next.time !== chat.time
+                }
+                showTail={
+                  !prev ||
+                  prev.sender !== chat.sender ||
+                  prev.time !== chat.time
+                }
+              />
             </div>
           )
         })}
       </div>
 
-      {/* 입력 */}
       <ChatInput onSend={sendMessage} />
     </div>
   )
