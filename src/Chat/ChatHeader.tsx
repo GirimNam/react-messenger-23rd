@@ -9,7 +9,7 @@ interface Props {
 
 function ChatHeader({ title }: Props) {
   return (
-    <div className="flex items-center justify-between py-2 px-2 h-[52px] bg-none border-b border-[0.75px] border-[var(--gray-30)]">
+    <div className="flex items-center justify-between py-2 px-[6px] h-[52px] bg-none border-b border-[0.75px] border-[var(--gray-30)]">
       <div className="flex items-center gap-1">
         <button className="w-[36px] h-[36px] flex items-center justify-center text-[var(--gray-90)]">
           <BackIcon />
