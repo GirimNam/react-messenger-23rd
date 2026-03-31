@@ -38,7 +38,7 @@ export default function Chat() {
           const prev = chatList[index - 1]
 
           const isSameGroupWithNext =
-            next && next.sender === chat.sender && next.time === chat.time
+            next && next.sender === chat.sender 
 
           const gapClass = isSameGroupWithNext ? 'mb-[4px]' : 'mb-[20px]'
 

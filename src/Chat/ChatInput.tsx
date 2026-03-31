@@ -35,6 +35,9 @@ function ChatInput({ onSend }: Props) {
         onChange={(e) => setMessage(e.target.value)}
         onKeyDown={handleKeyDown}
         className="w-full px-1 
+                  text-[16px]
+                  font-normal
+                  antialiased
                   placeholder:text-[16px]
                   placeholder:font-normal
                   placeholder:leading-[22px]
