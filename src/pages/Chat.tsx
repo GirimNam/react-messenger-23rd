@@ -26,7 +26,7 @@ export default function Chat() {
   }, [chatList])
 
   return (
-    <div className="flex flex-col flex-1 overflow-hidden w-full">
+    <div className="flex flex-col flex-1 overflow-hidden w-full bg-gray-20">
       <ChatHeader title="Data Visulization" />
 
       <div

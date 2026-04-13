@@ -47,10 +47,10 @@ function ChatInput({ onSend }: Props) {
 
       <div className="pt-5 flex flex-row justify-between items-center">
         <div className="flex flex-row gap-2 items-center">
-          <PlusIcon className="w-[32px] h-[32px] text-[var(--gray-60)]" />
-          <ImageIcon className="w-[32px] h-[32px] text-[var(--gray-60)]" />
-          <AtIcon className="w-[32px] h-[32px] text-[var(--gray-60)]" />
-          <EmojiIcon className="w-[32px] h-[32px] text-[var(--gray-60)]" />
+          <PlusIcon className="w-[32px] h-[32px] text-gray-60" />
+          <ImageIcon className="w-[32px] h-[32px] text-gray-60" />
+          <AtIcon className="w-[32px] h-[32px] text-gray-60" />
+          <EmojiIcon className="w-[32px] h-[32px] text-gray-60" />
         </div>
 
         <button
@@ -58,10 +58,10 @@ function ChatInput({ onSend }: Props) {
           disabled={!isActive}
           className={`
             w-[36px] h-[36px] rounded-full flex items-center justify-center cursor-pointer transition-colors duration-200
-            ${isActive ? 'bg-[var(--blue-50)]' : 'bg-[var(--gray-30)]'}
+            ${isActive ? 'bg-blue-50' : 'bg-gray-30'}
           `}
         >
-          <SendIcon className="w-[26px] h-[26px] text-[var(--gray-5)]" />
+          <SendIcon className="w-[26px] h-[26px] text-gray-5" />
         </button>
       </div>
     </div>
