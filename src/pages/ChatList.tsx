@@ -1,7 +1,11 @@
+import ChatListHeader from '@/ChatList/ChatListHeader'
+import ChatListFilter from '@/ChatList/ChatListFilter'
+
 function ChatList() {
   return (
     <>
-      <h1>header</h1>
+      <ChatListHeader />
+      <ChatListFilter />
     </>
   )
 }
