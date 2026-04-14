@@ -1,0 +1,49 @@
+{
+  "chatrooms": [
+    {
+      "id": 1,
+      "name": "학생생활상담연구소",
+      "memberCount": 23,
+      "lastMessage": "[학생생활상담연구소] 나 자신과 잘 지내는 연습 집단상담 안내",
+      "lastMessageTime": "방금",
+      "unreadCount": 12,
+      "isPinned": true
+    },
+    {
+      "id": 2,
+      "name": "Creative Capstone Project",
+      "memberCount": 23,
+      "lastMessage": "강의 개설 안내",
+      "lastMessageTime": "3월 2일",
+      "unreadCount": 0,
+      "isPinned": true
+    },
+    {
+      "id": 3,
+      "name": "융합교육혁신팀",
+      "memberCount": 23,
+      "lastMessage": "비대면(3/17, 화, 18시)대학생 진로설정법 및 TO-DO 특강(최성욱 팀장 직강)",
+      "lastMessageTime": "17:45",
+      "unreadCount": 0,
+      "isPinned": false
+    },
+    {
+      "id": 4,
+      "name": "교수학습센터",
+      "memberCount": 23,
+      "lastMessage": "[26-1] 스터디그룹 모집 안내(오늘 마감!)",
+      "lastMessageTime": "어제",
+      "unreadCount": 1,
+      "isPinned": false
+    },
+    {
+      "id": 5,
+      "name": "Data Visualization",
+      "memberCount": 23,
+      "lastMessage": "안녕하세요, 이 점 인지하지 못해 죄송합니다. 방금 생성해두었습니다!",
+      "lastMessageTime": "3월 9일",
+      "unreadCount": 3,
+      "isPinned": false
+    }
+  ]
+}
