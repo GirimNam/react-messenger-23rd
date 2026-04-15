@@ -8,7 +8,7 @@ type FriendsBarProps = {
 
 function FriendsBar({ currentTab, onChangeTab, totalCount }: FriendsBarProps) {
   return (
-    <div className="flex flex-row h-[40px] px-4 border-b-[1px] border-gray-20">
+    <div className="flex flex-row h-10 px-4 border-b border-gray-20">
       <button
         onClick={() => onChangeTab('all')}
         className={`flex-1 pt-2.5 pb-2 text-body1_r antialiased ${

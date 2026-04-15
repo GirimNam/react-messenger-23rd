@@ -18,12 +18,12 @@ function OtherProfile({ profile }: { profile: Profile }) {
   }
 
   return (
-    <div className="relative h-[60px] overflow-hidden ">
-      <div className="absolute top-0 left-0 h-full w-[66px]">
+    <div className="relative h-15 overflow-hidden ">
+      <div className="absolute top-0 left-0 h-full w-16.5">
         <button
           type="button"
           onClick={handleFavoriteClick}
-          className={`py-[10px] px-14px] flex flex-col gap-0.5 h-full w-full flex-col items-center justify-center text-white transition-colors duration-200 ${
+          className={`py-2.5 px-3.5 flex flex-col gap-0.5 h-full w-full items-center justify-center text-white transition-colors duration-200 ${
             isFavorite ? 'bg-blue-60' : 'bg-gray-50'
           }`}
         >
@@ -38,8 +38,8 @@ function OtherProfile({ profile }: { profile: Profile }) {
 
       <div
         onClick={handleProfileClick}
-        className={`flex h-[60px] cursor-pointer flex-row items-center gap-2 bg-white px-4 py-1 transition-transform duration-300 ${
-          isActionOpen ? 'translate-x-[74px]' : 'translate-x-0'
+        className={`flex h-15 cursor-pointer flex-row items-center gap-2 bg-white px-4 py-1 transition-transform duration-300 ${
+          isActionOpen ? 'translate-x-18.5' : 'translate-x-0'
         }`}
       >
         <img

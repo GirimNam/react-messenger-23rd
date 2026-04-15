@@ -3,7 +3,7 @@ import type { Profile } from '@/types/profile'
 
 function My({ profile }: { profile: Profile }) {
   return (
-    <div className="flex flex-row gap-3 p-4 h-[92px] border-b-[1px] border-gray-20">
+    <div className="flex flex-row gap-3 p-4 h-23 border-b- border-gray-20">
       <img
         src={Profile2}
         alt="프로필사진"

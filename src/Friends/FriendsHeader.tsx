@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom'
 function FriendsHeader() {
   const navigate = useNavigate()
   return (
-    <div className="relative flex items-center h-[56px] px-3">
+    <div className="relative flex items-center h-14 px-3">
       <button
         onClick={() => navigate('/myprofile')}
-        className="w-[36px] h-[36px] flex items-center justify-center cursor-pointer"
+        className="w-9 h-9 flex items-center justify-center cursor-pointer"
       >
         <img
           src={IconX}
@@ -21,7 +21,7 @@ function FriendsHeader() {
       </div>
 
       <div className="ml-auto">
-        <button className="w-[36px] h-[36px] flex items-center justify-center cursor-pointer">
+        <button className="w-9 h-9 flex items-center justify-center cursor-pointer">
           <img
             src={search}
             alt="돋보기"

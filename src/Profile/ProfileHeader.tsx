@@ -9,7 +9,7 @@ function ProfileHeader() {
   }
 
   return (
-    <div className="flex flex-row justify-between border-b-[0.25px] border-gray-30 h-[56px] p-3">
+    <div className="flex flex-row justify-between border-b-[0.25px] border-gray-30 h-14 p-3">
       <div className="flex flex-row ">
         <img
           src={ProfileHeaderInst}

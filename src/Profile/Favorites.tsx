@@ -21,12 +21,12 @@ function Favorites() {
   }
 
   return (
-    <div className="border-b-[1px] border-gray-20">
+    <div className="border-b- border-gray-20">
       <div
         onClick={handleToggle}
-        className="flex flex-row justify-between items-center h-[62px] px-4 py-5 cursor-pointer"
+        className="flex flex-row justify-between items-center h-15.5 px-4 py-5 cursor-pointer"
       >
-        <div className="flex flex-row gap-[6px]">
+        <div className="flex flex-row gap-1.5">
           <p className="text-title2 antialiased">즐겨찾기</p>
           <p className="text-body1_r text-gray-70 antialiased">
             {favoriteMembers.length}

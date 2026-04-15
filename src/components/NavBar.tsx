@@ -24,7 +24,7 @@ export default function NavBar() {
   ]
 
   return (
-    <footer className="h-[84px] px-4 pt-2 bg-gray-10 border-t-[0.25px] border-gray-30 flex justify-around items-center">
+    <footer className="h-21 px-4 pt-2 bg-gray-10 border-t-[0.25px] border-gray-30 flex justify-around items-center">
       {navItems.map((item, index) => {
         const isActive = item.path
           ? location.pathname.startsWith(item.path)
@@ -43,7 +43,7 @@ export default function NavBar() {
             <img
               src={item.icon}
               alt={item.name}
-              className={`w-[40px] h-[40px] ${isActive ? 'opacity-100' : 'opacity-40'}`}
+              className={`w-10 h-10 ${isActive ? 'opacity-100' : 'opacity-40'}`}
             />
           </button>
         )

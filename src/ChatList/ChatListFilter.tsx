@@ -6,7 +6,7 @@ function ChatListFilter() {
   const [activeTab, setActiveTab] = useState<string>('모두')
 
   return (
-    <div className="flex flex-row items-center gap-1.5 h-[54px] py-3 px-4">
+    <div className="flex flex-row items-center gap-1.5 h-13.5 py-3 px-4">
       {TABS.map((tab) => (
         <button
           key={tab}
