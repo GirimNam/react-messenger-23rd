@@ -24,7 +24,7 @@ function SendMe({ message, time, unreadCount, showTail, showTime }: Props) {
         )}
       </div>
 
-      <div className="relative max-w-87.75 px-3 py-2 bg-blue-20 rounded-[14px] flex items center">
+      <div className="relative max-w-66 px-3 py-2 bg-blue-20 rounded-[14px] flex items-center">
         {showTail && (
           <img
             src={TailBlue}
@@ -36,7 +36,7 @@ function SendMe({ message, time, unreadCount, showTail, showTime }: Props) {
           />
         )}
 
-        <div className="max-w-66 wrap-break-word text-[16px] leading-5.5 font-[400 antialiased">
+        <div className="max-w-60.5 wrap-break-word text-[16px] leading-5.5 font-normal antialiased">
           {message}
         </div>
       </div>

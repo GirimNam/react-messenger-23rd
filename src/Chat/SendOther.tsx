@@ -21,23 +21,21 @@ function SendOther({
   return (
     <div className="flex flex-row gap-1.5 ">
       <div className="flex flex-col justify-start pt-0.5">
-        {showTail && (
-          <button className="w-8 h-8 flex items-center justify-center shrink-0">
-            <img
-              src={Profile}
-              className="w-8 h-8"
-              alt="profile"
-            />
-          </button>
-        )}
+        <button className={`w-8 h-8 flex items-center justify-center shrink-0 ${!showTail ? 'invisible' : ''}`}>
+          <img
+            src={Profile}
+            className="w-8 h-8"
+            alt="profile"
+          />
+        </button>
       </div>
 
       <div className="flex flex-col gap-1">
-        <div className="text-gray-95 text-xs">{name}</div>
+        {showTail && <div className="text-gray-95 text-xs">{name}</div>}
 
         <div className="flex flex-row gap-1 items-end">
           {/* 3번 div*/}
-          <div className="relative max-w-87.75 px-3 py-2 bg-gray-5 rounded-[14px] flex items-center justify-center">
+          <div className="relative max-w-62.75 px-3 py-2 bg-gray-5 rounded-[14px] flex items-center justify-center">
             {showTail && (
               <img
                 src={TailWhite}
@@ -49,7 +47,7 @@ function SendOther({
               />
             )}
 
-            <div className="max-w-66 wrap-break-word text-[16px] font-normal leading-5.5 antialiased">
+            <div className="max-w-56.75 wrap-break-word text-[16px] font-normal leading-5.5 antialiased">
               {message}
             </div>
           </div>
