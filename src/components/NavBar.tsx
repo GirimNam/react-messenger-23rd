@@ -24,9 +24,9 @@ export default function NavBar() {
   const navItems: NavItem[] = [
     { path: '/myprofile', icon: NavProfile, iconFilled: NavProfileClicked, name: 'Profile' },
     { path: '/chatlist', icon: NavChat, iconFilled: NavChatClicked, name: 'ChatList' },
-    { icon: NavFile, iconFilled: NavFileClicked, name: 'FileIcon' },
-    { icon: NavEtc, iconFilled: NavEtcClicked, name: 'EtcIcon' },
-    { icon: NavSetting, iconFilled: NavSettingClicked, name: 'SettingIcon' },
+    { path: '/file', icon: NavFile, iconFilled: NavFileClicked, name: 'FileIcon' },
+    { path: '/apps', icon: NavEtc, iconFilled: NavEtcClicked, name: 'EtcIcon' },
+    { path: '/setting', icon: NavSetting, iconFilled: NavSettingClicked, name: 'SettingIcon' },
   ]
 
   return (

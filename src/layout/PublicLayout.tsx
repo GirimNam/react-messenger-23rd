@@ -4,7 +4,7 @@ import NavBar from '@/components/NavBar'
 function PublicLayout() {
   const location = useLocation()
 
-  const showNav = ['/myprofile', '/chatlist'].includes(location.pathname)
+  const showNav = ['/myprofile', '/chatlist', '/file', '/apps', '/setting'].includes(location.pathname)
 
   return (
     <div className="app">

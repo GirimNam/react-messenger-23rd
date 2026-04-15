@@ -5,6 +5,7 @@ import ChatList from '@/pages/ChatList'
 import Chat from '@/pages/Chat'
 import MyProfile from '@/pages/MyProfile'
 import Friends from '@/pages/Friends'
+import LoadingPage from '@/pages/LoadingPage'
 
 export const publicRoutes: RouteObject[] = [
   {
@@ -35,6 +36,18 @@ export const publicRoutes: RouteObject[] = [
       {
         path: 'friends',
         element: <Friends />,
+      },
+      {
+        path: 'file',
+        element: <LoadingPage />,
+      },
+      {
+        path: 'apps',
+        element: <LoadingPage />,
+      },
+      {
+        path: 'setting',
+        element: <LoadingPage />,
       },
     ],
   },
