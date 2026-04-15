@@ -45,7 +45,7 @@ export default function Chat() {
           const prev = chatList[index - 1]
 
           const isSameGroupWithNext =
-            next && next.sender === chat.sender && next.time === chat.time
+            next && next.sender === chat.sender
 
           const gapClass = isSameGroupWithNext ? 'mb-[4px]' : 'mb-[20px]'
 
@@ -80,7 +80,7 @@ export default function Chat() {
                 showTail={
                   !prev ||
                   prev.sender !== chat.sender ||
-                  prev.time !== chat.time
+                  prev.date !== chat.date
                 }
               />
             </div>
