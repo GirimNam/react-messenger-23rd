@@ -1,9 +1,11 @@
+import type { Message } from './chat'
+
 export type Chatroom = {
   id: number
   name: string
   memberCount: number
-  lastMessage: string
   lastMessageTime: string
   unreadCount: number
   isPinned: boolean
+  messages: Message[]
 }
