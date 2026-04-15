@@ -12,16 +12,18 @@ interface Props {
 function ChatInput({ onSend }: Props) {
   const [message, setMessage] = useState('')
 
+  const rows = Math.min(message.split('\n').length, 4)
+
   const handleSend = () => {
     if (!message.trim()) return
     onSend(message)
     setMessage('')
   }
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.nativeEvent.isComposing) return
-
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
       handleSend()
     }
   }
@@ -29,12 +31,13 @@ function ChatInput({ onSend }: Props) {
   const isActive = message.trim().length > 0
 
   return (
-    <div className="h-32.5 px-3 pt-4 pb-9 flex flex-col bg-gray-5 shadow-[0_-1px_13px_rgba(0,0,0,0.06)] ">
-      <input
+    <div className="px-3 pt-4 pb-9 flex flex-col bg-gray-5 shadow-[0_-1px_13px_rgba(0,0,0,0.06)]">
+      <textarea
+        rows={rows}
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         onKeyDown={handleKeyDown}
-        className="w-full px-1 
+        className="w-full px-1 resize-none leading-5.5 overflow-y-auto no-scrollbar
                   placeholder:text-[16px]
                   placeholder:font-normal
                   placeholder:leading-5.5
@@ -47,10 +50,18 @@ function ChatInput({ onSend }: Props) {
 
       <div className="pt-5 flex flex-row justify-between items-center">
         <div className="flex flex-row gap-2 items-center">
-          <PlusIcon className="w-8 h-8 text-gray-60" />
-          <ImageIcon className="w-8 h-8 text-gray-60" />
-          <AtIcon className="w-8 h-8 text-gray-60" />
-          <EmojiIcon className="w-8 h-8 text-gray-60" />
+          <button className="cursor-pointer">
+            <PlusIcon className="w-8 h-8 text-gray-60" />
+          </button>
+          <button className="cursor-pointer">
+            <ImageIcon className="w-8 h-8 text-gray-60" />
+          </button>
+          <button className="cursor-pointer">
+            <AtIcon className="w-8 h-8 text-gray-60" />
+          </button>
+          <button className="cursor-pointer">
+            <EmojiIcon className="w-8 h-8 text-gray-60" />
+          </button>
         </div>
 
         <button
