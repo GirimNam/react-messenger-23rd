@@ -1,21 +1,14 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import FrinedsBar from '@/Friends/FriendsBar'
 import FriendsHeader from '@/Friends/FriendsHeader'
 import OtherProfile from '@/components/OtherProfile'
-import type { Profile } from '@/types/profile'
+import { useMembers } from '@/context/MembersContext'
 
 type TabType = 'all' | 'favorite' | 'chat'
 
 function Friends() {
-  const [members, setMembers] = useState<Profile[]>([])
+  const { members } = useMembers()
   const [currentTab, setCurrentTab] = useState<TabType>('all')
-
-  useEffect(() => {
-    fetch('/data/member.json')
-      .then((res) => res.json())
-      .then((data) => setMembers(data.members))
-      .catch((err) => console.error('에러 발생', err))
-  }, [])
 
   const favoriteMembers = members.filter((member) => member.favorite)
 

@@ -1,18 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import RightArrow from '@assets/RightArrow.svg'
 import OtherProfile from '@/components/OtherProfile'
-import type { Profile } from '@/types/profile'
+import { useMembers } from '@/context/MembersContext'
 
 function Favorites() {
-  const [members, setMembers] = useState<Profile[]>([])
+  const { members } = useMembers()
   const [isOpen, setIsOpen] = useState(false)
-
-  useEffect(() => {
-    fetch('/data/member.json')
-      .then((res) => res.json())
-      .then((data) => setMembers(data.members))
-      .catch((err) => console.error('멤버 데이터를 불러오지 못했습니다.', err))
-  }, [])
 
   const favoriteMembers = members.filter((member) => member.favorite)
 

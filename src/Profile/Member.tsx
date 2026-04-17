@@ -1,18 +1,10 @@
 import RightArrow from '@assets/RightArrow.svg'
 import { useNavigate } from 'react-router-dom'
-import type { Profile } from '@/types/profile'
-import { useEffect, useState } from 'react'
+import { useMembers } from '@/context/MembersContext'
 
 function Member() {
   const navigate = useNavigate()
-  const [members, setMembers] = useState<Profile[]>([])
-
-  useEffect(() => {
-    fetch('/data/member.json')
-      .then((res) => res.json())
-      .then((data) => setMembers(data.members))
-      .catch((err) => console.error('멤버 데이터를 불러오지 못했습니다.', err))
-  }, [])
+  const { members } = useMembers()
 
   return (
     <div className="flex flex-row justify-between items-center h-15.5 border-b border-gray-20 px-4 py-5">

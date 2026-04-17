@@ -3,10 +3,11 @@ import type { Profile } from '@/types/profile'
 import Profile3 from '@assets/Profile3.svg'
 import EmptyStar from '@assets/Star.svg'
 import FilledStar from '@assets/Star_filled.svg'
+import { useMembers } from '@/context/MembersContext'
 
 function OtherProfile({ profile }: { profile: Profile }) {
   const [isActionOpen, setIsActionOpen] = useState(false)
-  const [isFavorite, setIsFavorite] = useState(profile.favorite)
+  const { toggleFavorite } = useMembers()
 
   const handleProfileClick = () => {
     setIsActionOpen((prev) => !prev)
@@ -14,7 +15,7 @@ function OtherProfile({ profile }: { profile: Profile }) {
 
   const handleFavoriteClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation()
-    setIsFavorite((prev) => !prev)
+    toggleFavorite(profile.id)
   }
 
   return (
@@ -24,11 +25,11 @@ function OtherProfile({ profile }: { profile: Profile }) {
           type="button"
           onClick={handleFavoriteClick}
           className={`py-2.5 px-3.5 flex flex-col gap-0.5 h-full w-full items-center justify-center text-white transition-colors duration-200 ${
-            isFavorite ? 'bg-blue-60' : 'bg-gray-50'
+            profile.favorite ? 'bg-blue-60' : 'bg-gray-50'
           }`}
         >
           <img
-            src={isFavorite ? FilledStar : EmptyStar}
+            src={profile.favorite ? FilledStar : EmptyStar}
             alt="즐겨찾기 아이콘"
             className="w-5 h-5"
           />
