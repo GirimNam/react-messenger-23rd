@@ -8,10 +8,10 @@ type FriendsBarProps = {
 
 function FriendsBar({ currentTab, onChangeTab, totalCount }: FriendsBarProps) {
   return (
-    <div className="flex flex-row h-10 px-4 border-b border-gray-20">
+    <div className="flex flex-row h-10 px-4 gap-6.5 border-b border-gray-20">
       <button
         onClick={() => onChangeTab('all')}
-        className={`flex-1 pt-2.5 pb-2 text-body1_r antialiased ${
+        className={`px-0.5 pt-2.5 pb-2 text-body1_r antialiased ${
           currentTab === 'all'
             ? 'text-black border-b-2 border-black'
             : 'text-gray-50'
@@ -21,25 +21,25 @@ function FriendsBar({ currentTab, onChangeTab, totalCount }: FriendsBarProps) {
       </button>
 
       <button
-        onClick={() => onChangeTab('chat')}
-        className={`flex-1 pt-2.5 pb-2 text-body1_r antialiased ${
-          currentTab === 'chat'
-            ? 'text-black border-b-2 border-black'
-            : 'text-gray-50'
-        }`}
-      >
-        채팅방 멤버
-      </button>
-
-      <button
         onClick={() => onChangeTab('favorite')}
-        className={`flex-1 pt-2.5 pb-2 text-body1_r antialiased ${
+        className={`px-0.5 pt-2.5 pb-2 text-body1_r antialiased ${
           currentTab === 'favorite'
             ? 'text-black border-b-2 border-black'
             : 'text-gray-50'
         }`}
       >
         즐겨찾기
+      </button>
+
+      <button
+        onClick={() => onChangeTab('chat')}
+        className={`px-0.5 pt-2.5 pb-2 text-body1_r antialiased ${
+          currentTab === 'chat'
+            ? 'text-black border-b-2 border-black'
+            : 'text-gray-50'
+        }`}
+      >
+        채팅방 멤버
       </button>
     </div>
   )
