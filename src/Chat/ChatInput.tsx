@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import PlusIcon from '@assets/PlusIcon'
-import ImageIcon from '@assets/ImageIcon'
-import AtIcon from '@assets/AtIcon'
-import EmojiIcon from '@assets/EmojiIcon'
 import SendIcon from '@assets/SendIcon'
+import PlusCircle from '@assets/icon-pluscircle.svg'
+import Image from '@assets/icon-image.svg'
+import At from '@assets/icon-at.svg'
+import Emoji from '@assets/icon-emoji.svg'
 
 interface Props {
   onSend: (text: string) => void
@@ -51,16 +51,32 @@ function ChatInput({ onSend }: Props) {
       <div className="pt-5 flex flex-row justify-between items-center">
         <div className="flex flex-row gap-2 items-center">
           <button className="cursor-pointer">
-            <PlusIcon className="w-8 h-8 text-gray-60" />
+            <img
+              src={PlusCircle}
+              alt=""
+              className="w-8 h-8"
+            />
           </button>
           <button className="cursor-pointer">
-            <ImageIcon className="w-8 h-8 text-gray-60" />
+            <img
+              src={Image}
+              alt=""
+              className="w-9 h-9"
+            />
           </button>
           <button className="cursor-pointer">
-            <AtIcon className="w-8 h-8 text-gray-60" />
+            <img
+              src={At}
+              alt=""
+              className="w-9 h-9"
+            />
           </button>
           <button className="cursor-pointer">
-            <EmojiIcon className="w-8 h-8 text-gray-60" />
+            <img
+              src={Emoji}
+              alt=""
+              className="w-[34px] h--[34px]"
+            />
           </button>
         </div>
 
