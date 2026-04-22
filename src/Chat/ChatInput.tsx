@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import SendIcon from '@assets/SendIcon'
+import SendIcon from '@assets/icon-send.svg'
 import PlusCircle from '@assets/icon-pluscircle.svg'
 import Image from '@assets/icon-image.svg'
 import At from '@assets/icon-at.svg'
@@ -75,7 +75,7 @@ function ChatInput({ onSend }: Props) {
             <img
               src={Emoji}
               alt=""
-              className="w-[34px] h--[34px]"
+              className="w-8.5 h-8.5"
             />
           </button>
         </div>
@@ -88,7 +88,7 @@ function ChatInput({ onSend }: Props) {
             ${isActive ? 'bg-blue-50' : 'bg-gray-30'}
           `}
         >
-          <SendIcon className="w-6.5 h-6.5 text-gray-5" />
+          <img src={SendIcon} alt="" className="w-6.5 h-6.5" />
         </button>
       </div>
     </div>

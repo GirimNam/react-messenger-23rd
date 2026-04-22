@@ -1,6 +1,6 @@
 import hamBurger from '@assets/icon-hamburger.svg'
 import searchIcon from '@assets/icon-search.svg'
-import BackIcon from '@assets/leftArrow'
+import BackIcon from '@assets/icon-backarrow.svg'
 import { useNavigate } from 'react-router-dom'
 
 interface Props {
@@ -18,7 +18,10 @@ function ChatHeader({ title, memberCount }: Props) {
           className="w-9 h-9 flex items-center justify-center text-gray-90 cursor-pointer"
           onClick={() => navigate(-1)}
         >
-          <BackIcon />
+          <img
+            src={BackIcon}
+            alt="뒤로가기"
+          />
         </button>
 
         <div className="font-semibold antialiased overflow-hidden text-ellipsis whitespace-nowrap text-[17px] leading-5.5 tracking-[-0.17px] text-gray-95">
