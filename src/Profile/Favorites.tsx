@@ -14,7 +14,7 @@ function Favorites() {
   }
 
   return (
-    <div className="border-b- border-gray-20">
+    <div className="border-b border-gray-20">
       <div
         onClick={handleToggle}
         className="flex flex-row justify-between items-center h-15.5 px-4 py-5 cursor-pointer"
