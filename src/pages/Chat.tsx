@@ -83,7 +83,7 @@ useEffect(() => {
                   prev.date !== chat.date
                 }
               />
-              {lastReadId === chat.id && next && <ReadDivider />}
+              {lastReadId === chat.id && next && next.date === chat.date && <ReadDivider />}
             </div>
           )
         })}
