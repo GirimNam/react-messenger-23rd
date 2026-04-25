@@ -8,11 +8,11 @@ const TABS: { key: Tab; label: string }[] = [
 ]
 
 interface Props {
-  activeTab: Tab
+  currentTab: Tab
   onChangeTab: (tab: Tab) => void
 }
 
-function ChatListFilter({ activeTab, onChangeTab }: Props) {
+function ChatListFilter({ currentTab, onChangeTab }: Props) {
   return (
     <div className="flex flex-row items-center gap-1.5 h-13.5 py-3 px-4">
       {TABS.map(({ key, label }) => (
@@ -22,7 +22,7 @@ function ChatListFilter({ activeTab, onChangeTab }: Props) {
           className={`
             px-3.5 py-1.5 rounded-full whitespace-nowrap antialiased
             ${
-              activeTab === key
+              currentTab === key
                 ? 'bg-blue-50 text-white text-body3_sb'
                 : 'border border-gray-30 text-gray-80 bg-white text-body3_r'
             }

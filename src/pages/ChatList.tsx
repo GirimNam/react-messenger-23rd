@@ -6,7 +6,7 @@ import type { Chatroom } from '@/types/chatroom'
 
 function ChatList() {
   const [chatrooms, setChatrooms] = useState<Chatroom[]>([])
-  const [activeTab, setActiveTab] = useState<Tab>('all')
+  const [currentTab, setActiveTab] = useState<Tab>('all')
 
   useEffect(() => {
     fetch('/data/chatroom.json')
@@ -21,16 +21,16 @@ function ChatList() {
       })
   }, [])
 
-  const filtered = activeTab === 'favorite'
+  const filtered = currentTab === 'favorite'
     ? chatrooms.filter((c) => c.isPinned)
-    : activeTab === 'unread'
+    : currentTab === 'unread'
     ? chatrooms.filter((c) => c.unreadCount > 0)
     : chatrooms
 
   return (
     <div className="flex flex-col h-screen overflow-hidden">
       <ChatListHeader />
-      <ChatListFilter activeTab={activeTab} onChangeTab={setActiveTab} />
+      <ChatListFilter currentTab={currentTab} onChangeTab={setActiveTab} />
       <div className="flex-1 overflow-y-auto no-scrollbar">
         {filtered.map((chatroom) => (
           <ChatListProfile key={chatroom.id} chatroom={chatroom} />
