@@ -211,6 +211,72 @@
           "unreadCount": 0
         }
       ]
+    },
+    {
+      "id": 6,
+      "name": "26-1 운영체제 2분반 오픈채팅방",
+      "memberCount": 89,
+      "lastMessageTime": "어제",
+      "unreadCount": 1,
+      "isPinned": false,
+      "messages": [
+        {
+          "id": "6-1",
+          "text": "4월 3일 운체 녹음본 구합니다. 사례 있어요!",
+          "sender": "other",
+          "senderName": "공부하는 어피치",
+          "time": "14:30",
+          "date": "2026-04-24",
+          "unreadCount": 65
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "26 전국단위 공모전 팀빌딩방",
+      "memberCount": 15,
+      "lastMessageTime": "어제",
+      "unreadCount": 1,
+      "isPinned": false,
+      "messages": [
+        {
+          "id": "7-1",
+          "text": "팀원 구합니다. 개인 프로필로 들어가서 연락주세요.",
+          "sender": "other",
+          "senderName": "공부하는 어피치",
+          "time": "14:30",
+          "date": "2026-04-24",
+          "unreadCount": 4
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": " 이화여대 컴퓨터공학과 학생회",
+      "memberCount": 22,
+      "lastMessageTime": "어제",
+      "unreadCount": 0,
+      "isPinned": false,
+      "messages": [
+        {
+          "id": "8-1",
+          "text": "지금 과방에 있는 사람",
+          "sender": "other",
+          "senderName": "학생 대표",
+          "time": "14:30",
+          "date": "2026-04-24",
+          "unreadCount": 4
+        },
+        {
+          "id": "8-2",
+          "text": "저용",
+          "sender": "me",
+          "senderName": "나",
+          "time": "15:14",
+          "date": "2026-04-24",
+          "unreadCount": 10
+        }
+      ]
     }
   ]
 }

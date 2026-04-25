@@ -49,7 +49,7 @@ export function useChat(chatroomId: number) {
         minute: '2-digit',
         hour12: false,
       }),
-      unreadCount: 1,
+      unreadCount: memberCount - 1,
     }
 
     setChatList((prev) => [...prev, newMessage])
