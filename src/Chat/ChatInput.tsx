@@ -51,18 +51,12 @@ function ChatInput({ onSend }: Props) {
   return (
     <div className="px-3 pt-4 pb-9 flex flex-col bg-gray-5 shadow-[0_-1px_13px_rgba(0,0,0,0.06)]">
       {imagePreview && (
-        <div className="relative w-16 h-16 mb-3">
+        <div className="relative w-12 h-12 mb-3">
           <img
             src={imagePreview}
             alt="첨부 이미지"
-            className="w-16 h-16 rounded-lg object-cover"
+            className="w-12 h-12 rounded-sm object-cover"
           />
-          <button
-            onClick={() => setImagePreview(null)}
-            className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-gray-60 rounded-full flex items-center justify-center text-white text-[10px] leading-none"
-          >
-            ✕
-          </button>
         </div>
       )}
 
@@ -85,16 +79,35 @@ function ChatInput({ onSend }: Props) {
       <div className="pt-5 flex flex-row justify-between items-center">
         <div className="flex flex-row gap-2 items-center">
           <button className="cursor-pointer">
-            <img src={PlusCircle} alt="" className="w-8 h-8" />
+            <img
+              src={PlusCircle}
+              alt=""
+              className="w-8 h-8"
+            />
           </button>
-          <button className="cursor-pointer" onClick={handleImageClick}>
-            <img src={Image} alt="" className="w-9 h-9" />
+          <button
+            className="cursor-pointer"
+            onClick={handleImageClick}
+          >
+            <img
+              src={Image}
+              alt=""
+              className="w-9 h-9"
+            />
           </button>
           <button className="cursor-pointer">
-            <img src={At} alt="" className="w-9 h-9" />
+            <img
+              src={At}
+              alt=""
+              className="w-9 h-9"
+            />
           </button>
           <button className="cursor-pointer">
-            <img src={Emoji} alt="" className="w-8.5 h-8.5" />
+            <img
+              src={Emoji}
+              alt=""
+              className="w-8.5 h-8.5"
+            />
           </button>
         </div>
 
@@ -106,7 +119,11 @@ function ChatInput({ onSend }: Props) {
             ${isActive ? 'bg-blue-50' : 'bg-gray-30'}
           `}
         >
-          <img src={SendIcon} alt="" className="w-6.5 h-6.5" />
+          <img
+            src={SendIcon}
+            alt=""
+            className="w-6.5 h-6.5"
+          />
         </button>
       </div>
 
