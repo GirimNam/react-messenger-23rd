@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import RightArrow from '@assets/icon-rightarrow.svg'
 import OtherProfile from '@/components/OtherProfile'
-import { useMembers } from '@/context/MembersContext'
+import { useMembersStore } from '@/store/membersStore'
 
 function Favorites() {
-  const { members } = useMembers()
+  const members = useMembersStore((state) => state.members)
   const [isOpen, setIsOpen] = useState(false)
 
   const favoriteMembers = members.filter((member) => member.favorite)

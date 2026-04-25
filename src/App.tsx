@@ -1,13 +1,16 @@
+import { useEffect } from 'react'
 import { RouterProvider } from 'react-router-dom'
-import { MembersProvider } from '@/context/MembersContext'
+import { useMembersStore } from '@/store/membersStore'
 import { router } from '@/routes/router'
 
 function App() {
-  return (
-    <MembersProvider>
-      <RouterProvider router={router} />
-    </MembersProvider>
-  )
+  const initMembers = useMembersStore((state) => state.initMembers)
+
+  useEffect(() => {
+    initMembers()
+  }, [])
+
+  return <RouterProvider router={router} />
 }
 
 export default App

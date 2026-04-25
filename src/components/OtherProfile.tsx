@@ -3,11 +3,11 @@ import type { Profile } from '@/types/profile'
 import Profile3 from '@assets/icon-profile3.svg'
 import EmptyStar from '@assets/icon-star.svg'
 import FilledStar from '@assets/icon-star-filled.svg'
-import { useMembers } from '@/context/MembersContext'
+import { useMembersStore } from '@/store/membersStore'
 
 function OtherProfile({ profile }: { profile: Profile }) {
   const [isActionOpen, setIsActionOpen] = useState(false)
-  const { toggleFavorite } = useMembers()
+  const toggleFavorite = useMembersStore((state) => state.toggleFavorite)
 
   const handleProfileClick = () => {
     setIsActionOpen((prev) => !prev)

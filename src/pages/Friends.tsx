@@ -2,12 +2,12 @@ import { useState } from 'react'
 import FrinedsBar from '@/Friends/FriendsBar'
 import FriendsHeader from '@/Friends/FriendsHeader'
 import OtherProfile from '@/components/OtherProfile'
-import { useMembers } from '@/context/MembersContext'
+import { useMembersStore } from '@/store/membersStore'
 
 type TabType = 'all' | 'favorite' | 'chat'
 
 function Friends() {
-  const { members } = useMembers()
+  const members = useMembersStore((state) => state.members)
   const [currentTab, setCurrentTab] = useState<TabType>('all')
 
   const favoriteMembers = members.filter((member) => member.favorite)

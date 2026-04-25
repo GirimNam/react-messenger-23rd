@@ -1,10 +1,10 @@
 import RightArrow from '@assets/icon-rightarrow.svg'
 import { useNavigate } from 'react-router-dom'
-import { useMembers } from '@/context/MembersContext'
+import { useMembersStore } from '@/store/membersStore'
 
 function Member() {
   const navigate = useNavigate()
-  const { members } = useMembers()
+  const members = useMembersStore((state) => state.members)
 
   return (
     <div className="flex flex-row justify-between items-center h-15.5 border-b border-gray-20 px-4 py-5">
