@@ -43,9 +43,7 @@ function SendMe({ message, time, unreadCount, showTail, showTime }: Props) {
             src={TailBlue}
             alt=""
             className="absolute -right-[3.5px] top-0.75 w-2 h-4 z-10"
-            style={{
-              zIndex: 0,
-            }}
+            style={{ zIndex: 0 }}
           />
         )}
 
@@ -59,14 +57,8 @@ function SendMe({ message, time, unreadCount, showTail, showTime }: Props) {
 
         {isOverflow && (
           <button className="flex justify-end items-center gap-0.5 mt-1 w-full cursor-pointer">
-            <span className="text-caption1 text-gray-60 antialiased">
-              전체보기
-            </span>
-            <img
-              src={RightArrow}
-              alt=""
-              className="w-3 h-3"
-            />
+            <span className="text-caption1 text-gray-60 antialiased">전체보기</span>
+            <img src={RightArrow} alt="" className="w-3 h-3" />
           </button>
         )}
       </div>

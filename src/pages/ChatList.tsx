@@ -28,13 +28,15 @@ function ChatList() {
     : chatrooms
 
   return (
-    <>
+    <div className="flex flex-col h-screen overflow-hidden">
       <ChatListHeader />
       <ChatListFilter activeTab={activeTab} onChangeTab={setActiveTab} />
-      {filtered.map((chatroom) => (
-        <ChatListProfile key={chatroom.id} chatroom={chatroom} />
-      ))}
-    </>
+      <div className="flex-1 overflow-y-auto no-scrollbar">
+        {filtered.map((chatroom) => (
+          <ChatListProfile key={chatroom.id} chatroom={chatroom} />
+        ))}
+      </div>
+    </div>
   )
 }
 export default ChatList
