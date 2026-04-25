@@ -1,6 +1,11 @@
-const TABS = ['모두', '읽지 않음', '즐겨찾기', '그룹'] as const
+type Tab = 'all' | 'unread' | 'favorite' | 'group'
 
-type Tab = (typeof TABS)[number]
+const TABS: { key: Tab; label: string }[] = [
+  { key: 'all', label: '모두' },
+  { key: 'unread', label: '읽지 않음' },
+  { key: 'favorite', label: '즐겨찾기' },
+  { key: 'group', label: '그룹' },
+]
 
 interface Props {
   activeTab: Tab
@@ -10,20 +15,20 @@ interface Props {
 function ChatListFilter({ activeTab, onChangeTab }: Props) {
   return (
     <div className="flex flex-row items-center gap-1.5 h-13.5 py-3 px-4">
-      {TABS.map((tab) => (
+      {TABS.map(({ key, label }) => (
         <button
-          key={tab}
-          onClick={() => onChangeTab(tab)}
+          key={key}
+          onClick={() => onChangeTab(key)}
           className={`
             px-3.5 py-1.5 rounded-full whitespace-nowrap antialiased
             ${
-              activeTab === tab
+              activeTab === key
                 ? 'bg-blue-50 text-white text-body3_sb'
                 : 'border border-gray-30 text-gray-80 bg-white text-body3_r'
             }
           `}
         >
-          {tab}
+          {label}
         </button>
       ))}
 

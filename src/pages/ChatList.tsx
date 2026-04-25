@@ -6,7 +6,7 @@ import type { Chatroom } from '@/types/chatroom'
 
 function ChatList() {
   const [chatrooms, setChatrooms] = useState<Chatroom[]>([])
-  const [activeTab, setActiveTab] = useState<Tab>('모두')
+  const [activeTab, setActiveTab] = useState<Tab>('all')
 
   useEffect(() => {
     fetch('/data/chatroom.json')
@@ -21,9 +21,9 @@ function ChatList() {
       })
   }, [])
 
-  const filtered = activeTab === '즐겨찾기'
+  const filtered = activeTab === 'favorite'
     ? chatrooms.filter((c) => c.isPinned)
-    : activeTab === '읽지 않음'
+    : activeTab === 'unread'
     ? chatrooms.filter((c) => c.unreadCount > 0)
     : chatrooms
 
